@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Apply now · JustHired</title>
+<meta name="description" content="Apply in 3 minutes. You choose the company and the site. ₱1,000 joining bonus.">
+<meta name="theme-color" content="#0b2a6f">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="JustHired Philippines">
+<meta property="og:title" content="Apply now · JustHired">
+<meta property="og:description" content="Apply in 3 minutes. You choose the company and the site. ₱1,000 joining bonus.">
+<meta property="og:url" content="https://jobs.justhiredhr.com/apply-form">
+<meta property="og:image" content="https://jobs.justhiredhr.com/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  html,body{margin:0;height:100%;background:#f4f6fb;overflow:hidden}
+  #app{position:fixed;inset:0;width:100%;height:100%;border:0;display:block;background:#f4f6fb}
+  #load{position:fixed;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+    background:linear-gradient(160deg,#0b2a6f,#1a2a96);color:#fff;font:600 15px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;transition:opacity .35s}
+  #load.off{opacity:0;pointer-events:none}
+  #load img{width:84px;height:84px;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.3);animation:p 1.4s ease-in-out infinite}
+  #load small{opacity:.8;font-weight:500}
+  @keyframes p{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+  noscript{position:fixed;inset:auto 0 30px;text-align:center;color:#fff;font:15px system-ui}
+</style>
+</head>
+<body>
+<div id="load"><img src="/apple-touch-icon.png" alt="JustHired"><div>Loading JustHired…</div><small>Your Future. Our Mission. 🙏</small></div>
+<iframe id="app" title="JustHired" allow="clipboard-read; clipboard-write; web-share; fullscreen"></iframe>
+<noscript>Please turn on JavaScript to use this page.</noscript>
+<script>
+(function(){
+  var APP='https://script.google.com/macros/s/AKfycbyKE97GjmVt3t9tZg2t5oHK0W5TqiARNEMhgbbzzF37sL0N4Kb-2xtM16caOmdWF2Hy/exec', base={"a": "apply", "fs": "1"};
+  var q=new URLSearchParams(location.search), p=new URLSearchParams();
+  Object.keys(base).forEach(function(k){p.set(k,base[k])});
+  q.forEach(function(v,k){ if(!(k in base)) p.set(k,v) });   // personal link details pass through (r, t, id, ok, ref…)
+  if(!p.get('a')){ location.replace('/'); return; }
+  var f=document.getElementById('app'), l=document.getElementById('load');
+  var done=function(){ l.className='off'; };
+  f.addEventListener('load',done); setTimeout(done,9000);
+  f.src=APP+'?'+p.toString();
+})();
+</script>
+</body>
+</html>
